@@ -1,0 +1,91 @@
+:root {
+    --primary-color: #fff;
+    --secondary-color: #eee;
+    --padding: 15px;
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+    --border: 1px solid #ccc;
+    --radius: 10px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+    letter-spacing: -0.5px;
+    text-transform: capitalize;
+    background-color: #eee;
+}
+
+ul {
+    list-style: none;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--blue-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--blue-alt-color);
+}
+
+/* start plans wedget*/
+.plans{
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    margin-left: 20px;
+    margin-right: 20px;
+}
+@media (max-width:767px) {
+    .plans{
+        grid-template-columns: minmax(200px, 1fr);
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+.plan .offer{
+    border: 5px solid var(--primary-color);
+    outline: 5px solid var(--green-color);
+}
+.plan  .green{
+    outline-color: var(--green-color);
+    
+}
+.plan  .blue{
+    outline-color: var(--blue-color);
+    
+}
+.plan  .orange{
+    outline-color: var(--orange-color);
+}
+
+.plan  .offer p{
+    font-size: 40px;
+    padding: 20px 0;
+    line-height: 50px;
+}
+.plan  .offer sup{
+    top: -15px;
+    left: -5px;
+}
+.condition{
+    border-bottom: var(--border);
+}
+.condition .info{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    text-transform: lowercase;
+    margin-left: auto;
+}
+/* end plans wedget*/

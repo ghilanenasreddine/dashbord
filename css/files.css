@@ -1,0 +1,109 @@
+:root {
+    --primary-color: #fff;
+    --secondary-color: #eee;
+    --padding: 15px;
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+    --border: 1px solid #ccc;
+    --radius: 10px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+    letter-spacing: -0.5px;
+    text-transform: capitalize;
+    background-color: #eee;
+}
+
+ul {
+    list-style: none;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--blue-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--blue-alt-color);
+}
+
+/* start files wedget*/
+.files-page{
+    align-items: flex-start;
+    flex-direction: row-reverse;
+}
+.files-stats{
+    min-width: 260px;
+}
+.files-stats .icon{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.files-stats .blue{
+    background-color: #1da1f233
+}
+.files-stats .green{
+    background-color: rgba(34, 197, 94, 0.2);
+}
+.files-stats .red{
+    background-color: rgba(244, 67,54 , 0.2);
+}
+.files-stats .orange{
+    background-color: rgba(254, 158, 11, 0.2);
+}
+.files-stats .size{
+    margin-left: auto;
+}
+.upload{
+    margin: 0 auto;
+    transition: 0.3s;
+}
+.upload i{
+    margin-right: 10px;
+}
+.upload:hover{
+    background-color: var(--blue-alt-color);
+}
+.upload:hover i{
+    animation: go-up 0.5s infinite;
+}
+@keyframes go-up {
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-2px);
+    }
+}
+
+.files{
+    flex: 1;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+.files .file .details{
+    border-bottom: var(--border);
+}
+.files .file .details img{
+    height: 62px;
+}
+@media (max-width:767px) {
+    .files-page{
+        flex-direction: column;
+        align-items: normal;
+    }
+}
+/* end files wedget*/
